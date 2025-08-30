@@ -36,13 +36,15 @@ if __name__ == "__main__":
     user_manager.add_user(2,"Carlos")
     user_manager.add_user(3,"Perez")
 
-    print("Usuario:", user_manager.find_user(1))
-    print("Usuario:", user_manager.find_user(2))
-    print("Usuario:", user_manager.find_user(3))
+    #print("Usuario:", user_manager.find_user(1))
+    #print("Usuario:", user_manager.find_user(2))
+    #print("Usuario:", user_manager.find_user(3))
     
-    user_manager.delete_user(1)
-    user_manager.delete_user(2)
-    user_manager.delete_user(3)
-    print(user_manager.users)
+    #user_manager.delete_user(1)
+    #user_manager.delete_user(2)
+    #user_manager.delete_user(3)
+    #print(user_manager.users)
+
+    print(user_manager.get_all_names())
     
 print("end")
