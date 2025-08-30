@@ -1,7 +1,8 @@
 import time
 class UserManager:
-    def __init__(self):
+    def __init__(self,max_users=1000):
         self.users = []  
+        self.max_users = max_users
 
     def add_user(self, user_id, name):
         self.users.append({"id": user_id, "name": name})
@@ -28,13 +29,10 @@ class UserManager:
 
 if __name__ == "__main__":
     user_manager = UserManager()
-    #for i in range(3):
-        #user_manager.add_user(i,f"Yo soy el num :{i}")
-
-
-    user_manager.add_user(1,"Luis")
-    user_manager.add_user(2,"Carlos")
-    user_manager.add_user(3,"Perez")
+    
+     #user_manager.add_user(1,"Luis")
+    #user_manager.add_user(2,"Carlos")
+    #user_manager.add_user(3,"Perez")
 
     #print("Usuario:", user_manager.find_user(1))
     #print("Usuario:", user_manager.find_user(2))
@@ -45,8 +43,14 @@ if __name__ == "__main__":
     #user_manager.delete_user(3)
     #print(user_manager.users)
 
-    print(user_manager.get_all_names())
+    #print(user_manager.get_all_names())
 
-    print(user_manager.average_user_id())
+    #print(user_manager.average_user_id())
+    #-----------------------------------------------#
+
+    for i in range(3):
+       print(user_manager.add_user(i,f"Yo soy el num :{i}")) 
+    
+
     
 print("end")
