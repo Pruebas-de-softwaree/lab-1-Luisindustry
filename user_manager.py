@@ -17,10 +17,8 @@ class UserManager:
         return user  
 
     def delete_user(self, user_id):
-        for u in self.users:
-            if u["id"] == user_id:
-                self.users.remove(u)
-                break  
+        self.users =[u for u in self.users if u["id"] != user_id]
+            
 
     def get_all_names(self):
         return [u["id"] for u in self.users]
@@ -31,6 +29,7 @@ class UserManager:
 
 if __name__ == "__main__":
     user_manager = UserManager()
+    
     
      #user_manager.add_user(1,"Luis")
     #user_manager.add_user(2,"Carlos")
@@ -50,10 +49,12 @@ if __name__ == "__main__":
     #print(user_manager.average_user_id())
     #-----------------------------------------------#
 
-    for i in range(1000):
-       print(user_manager.add_user(i,f"Yo soy el num :{i}")) 
+    #for i in range(1000):
+       #print(user_manager.add_user(i,f"Yo soy el num :{i}")) 
     
-    print(f"Tiempo: {elapsed:.8f} segundos")
+    #print(f"Tiempo: {elapsed:.8f} segundos")
+
+    
 
     
 print("end")
