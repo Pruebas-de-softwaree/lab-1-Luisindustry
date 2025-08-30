@@ -46,5 +46,7 @@ if __name__ == "__main__":
     #print(user_manager.users)
 
     print(user_manager.get_all_names())
+
+    print(user_manager.average_user_id())
     
 print("end")
