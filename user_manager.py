@@ -30,9 +30,15 @@ if __name__ == "__main__":
     user_manager = UserManager()
     #for i in range(3):
         #user_manager.add_user(i,f"Yo soy el num :{i}")
+
+
     user_manager.add_user(1,"Luis")
     user_manager.add_user(2,"Carlos")
     user_manager.add_user(3,"Perez")
+
+    print("Usuario:", user_manager.find_user(1))
+    print("Usuario:", user_manager.find_user(2))
+    print("Usuario:", user_manager.find_user(3))
     
     
 print("end")
