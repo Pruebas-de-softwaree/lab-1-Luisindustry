@@ -40,5 +40,9 @@ if __name__ == "__main__":
     print("Usuario:", user_manager.find_user(2))
     print("Usuario:", user_manager.find_user(3))
     
+    user_manager.delete_user(1)
+    user_manager.delete_user(2)
+    user_manager.delete_user(3)
+    print(user_manager.users)
     
 print("end")
