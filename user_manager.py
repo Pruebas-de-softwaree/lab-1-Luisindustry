@@ -8,10 +8,12 @@ class UserManager:
         self.users.append({"id": user_id, "name": name})
 
     def find_user(self, user_id):
+        start = time.time()
         user = None
         for u in self.users:
             if u["id"] == user_id:
                 user = u
+        elapsed = time.time() - start
         return user  
 
     def delete_user(self, user_id):
@@ -48,9 +50,10 @@ if __name__ == "__main__":
     #print(user_manager.average_user_id())
     #-----------------------------------------------#
 
-    for i in range(3):
+    for i in range(1000):
        print(user_manager.add_user(i,f"Yo soy el num :{i}")) 
     
+    print(f"Tiempo: {elapsed:.8f} segundos")
 
     
 print("end")
